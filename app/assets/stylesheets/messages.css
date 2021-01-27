@@ -82,7 +82,7 @@
   justify-content: space-between;
 }
 
-.left-header {
+.header-title {
   color: #333;
   font-size: 24px;
   margin-top: 36px;
@@ -122,7 +122,7 @@
 .message-date {
   color: #999;
   font-size: 12px;
-padding-left: 10px;
+  padding-left: 10px;
 }
 
 .lower-message {
