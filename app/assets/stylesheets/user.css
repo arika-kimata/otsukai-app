@@ -74,7 +74,7 @@
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
-  color: #d65f4c;
+  color: #336633;
   font-weight: 400;
 }
 .account-page .field-input .field_with_errors {
@@ -88,7 +88,7 @@
   right: 0;
   bottom: 0;
   width: 5px;
-  background-color: #d65f4c;
+  background-color: teal;
 }
 
 #error_explanation {
