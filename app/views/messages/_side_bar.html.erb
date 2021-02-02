@@ -33,7 +33,7 @@
     <% current_user.rooms.each do |room| %>
       <div class="room">
         <div class="room-name">
-          <span class="decoration">・</span><a href="#"><%= room.name %></a>
+          <span class="decoration">・</span><%= link_to room.name, room_messages_path(room) %></a>
        </div>
       </div>
     <% end %>
