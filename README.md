@@ -14,7 +14,8 @@
 - has_many :rooms, through: room_users
 - has_many :messages
 - has_many :lists,
-- belongs_to :groups
+- has_many :user_groups
+- has_many :groups, through: user_groups
 - has_many :tag_users
 - has_many :tags, through: tag_users
 
@@ -115,7 +116,21 @@
 
 ### Association
 
-- has_many :users
+- has_many :user_groups
+- has_many :user, through: user_groups
+
+## user_groups テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| group  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :group
+
 
 ## user_tags テーブル
 
