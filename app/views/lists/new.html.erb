@@ -16,6 +16,13 @@
         <label class='list-form__label' for='chat_room_リストメンバー'>リスト共有メンバー</label>
       </div>
       <div class='list-form__field--right'>
+        <select name="list[user_ids][]">
+          <option>リストを共有するユーザーを選択してください</option>
+          <% User.where(id: current_user.id).each do |user| %>
+            <option balue=<%= user.id%>><%= user.name %></option>
+          <% end %>
+        </select>
+        <input name="list[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
     </div>
     <div class='list-form__field'>
