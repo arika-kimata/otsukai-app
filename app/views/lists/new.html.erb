@@ -1,0 +1,28 @@
+<div class='list-form'>
+  <h1>新規リスト</h1>
+  <%=form_with model: @list, local: true do |l|%>
+    <div class='list-form__field'>
+      <div class='list-form__field--left'>
+        <%= l.label :リスト名, class: 'list-form__label'%>
+      </div>
+      <div class='list-form__field--right'>
+        <%= l.text_field :name, class: 'list_name list-form__input', placeholder: 'リスト名を入力してください'%>
+      </div>
+    </div>
+    <div class='list-form__field'>
+    </div>
+    <div class='list-form__field'>
+      <div class='list-form__field--left'>
+        <label class='list-form__label' for='chat_room_リストメンバー'>リスト共有メンバー</label>
+      </div>
+      <div class='list-form__field--right'>
+      </div>
+    </div>
+    <div class='list-form__field'>
+      <div class='list-form__field--left'></div>
+      <div class='list-form__field--right'>
+        <%= l.submit class: 'list-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
