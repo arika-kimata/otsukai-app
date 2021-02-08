@@ -78,7 +78,6 @@
 | Column | Type   | Options     |
 | ------ | ------ | ----------- |
 | name   | string | null: false |
-| image  | string | null: false |
 
 ### Association
 - has_many :tag_lists
