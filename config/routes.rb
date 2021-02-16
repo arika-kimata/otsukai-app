@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
   resources :lists, only: [:new, :create]
+  resources :groups, only: [:new, :create]
 end
