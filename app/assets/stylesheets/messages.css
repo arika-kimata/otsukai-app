@@ -95,6 +95,10 @@
   justify-content: space-between;
 }
 
+.right-header {
+  display: flex;;
+}
+
 .header-title {
   color: #333;
   font-size: 24px;
@@ -102,7 +106,7 @@
 }
 
 .header-button {
-  margin-top: 40px;
+  margin: 40px 10px 0;
 }
 
 .header-button a {
