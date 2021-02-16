@@ -14,17 +14,13 @@
         <%= link_to "グループ作成", new_room_path %>
       </div>
     </div>
-    <div class="group">
-      <div class="group-name">
-        <span class="decoration">・</span><a href="#">suzuki family</a>
+    <% current_user.groups.each do |group| %>
+      <div class="group">
+        <div class="group-name">
+          <span class="decoration">・</span><a href="#"><%= group.name %></a>
+        </div>
       </div>
-    </div>
-
-    <div class="group">
-      <div class="group-name">
-        <span class="decoration">・</span><a href="#">kikuchi family</a>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <div class="lists">
