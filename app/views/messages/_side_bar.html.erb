@@ -3,33 +3,53 @@
    <div class="header-name">
      <%= link_to current_user.name, edit_user_path(current_user) %>
     </div>
-   <div class="create-room">
-      <%= link_to "チャットを作成する", new_room_path %>
-    </div>
-  </div>
-  <div class="group-name">
-    <a href="#"><span class="decoration">[</span> suzuki Family <span class="decoration">]</span></a>
   </div>
 </div>
 
 <div class="side-content">
-  <div class="lists">
-    <span class="side-title">おつかいリスト</span>
-    <div class="list">
-      <div class="list-name">
-        <span class="decoration">・</span><a href="#">食料品</a>
+  <div class="groups">
+    <div class="group-bar">
+      <span class="side-title">グループ一覧</span>
+      <div class="create-group">
+        <%= link_to "グループ作成", new_room_path %>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-name">
+        <span class="decoration">・</span><a href="#">suzuki family</a>
       </div>
     </div>
 
-    <div class="list">
-      <div class="list-name">
-        <span class="decoration">・</span><a href="#">日用品</a>
+    <div class="group">
+      <div class="group-name">
+        <span class="decoration">・</span><a href="#">kikuchi family</a>
       </div>
     </div>
   </div>
 
+  <div class="lists">
+    <div class="list-bar">
+      <span class="side-title">おつかいリスト</span>
+      <div class="create-list">
+        <%= link_to "リスト作成", new_list_path %>
+      </div>
+    </div>
+    <% current_user.lists.each do |list| %>
+      <div class="list">
+        <div class="list-name">
+          <span class="decoration">・</span><a href="#"><%= list.name %></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
   <div class="rooms">
-    <span class="side-title">チャットルーム</span>
+    <div class="room-bar">
+      <span class="side-title">チャットルーム</span>
+      <div class="create-room">
+        <%= link_to "チャット作成", new_room_path %>
+      </div>
+    </div>
     <% current_user.rooms.each do |room| %>
       <div class="room">
         <div class="room-name">
