@@ -18,8 +18,8 @@
       <div class='list-form__field--right'>
         <select name="list[user_ids][]">
           <option>リストを共有するユーザーを選択してください</option>
-          <% User.where(id: current_user.id).each do |user| %>
-            <option balue=<%= user.id%>><%= user.name %></option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id%>><%= user.name %></option>
           <% end %>
         </select>
         <input name="list[user_ids][]" type="hidden" value=<%= current_user.id %>>
