@@ -7,7 +7,12 @@ class User < ApplicationRecord
 
   has_many :room_users
   has_many :rooms, through: :room_users
+
   has_many :messages
+
   has_many :list_users
   has_many :lists, through: :list_users
+
+  has_many :group_users
+  has_many :groups, through: :group_users
 end

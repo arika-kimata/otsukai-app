@@ -4,12 +4,13 @@
 
 .side-bar {
   background-color: lightseagreen;
-  width: 300px;
+  width: 350px;
   height: 100vh;
 }
 
 .decoration {
   color: #336633;
+  padding: 0 5px;
 }
 
 .side-bar-header {
@@ -81,6 +82,19 @@
 .room-name a {
   color: white;
   text-decoration: none;
+}
+
+.group-name {
+  display: flex;
+}
+
+.group-more {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-tag {
+  margin-left: 10px;
 }
 
 .chat {
