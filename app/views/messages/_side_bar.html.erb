@@ -11,13 +11,19 @@
     <div class="group-bar">
       <span class="side-title">グループ一覧</span>
       <div class="create-group">
-        <%= link_to "グループ作成", new_room_path %>
+        <%= link_to "グループ作成", new_group_path %>
       </div>
     </div>
     <% current_user.groups.each do |group| %>
       <div class="group">
         <div class="group-name">
-          <span class="decoration">・</span><a href="#"><%= group.name %></a>
+          <span class="decoration">・</span>
+          <div class="group-more">
+            <a href="#"><%= group.name %></a>
+            <div class="group-tag">
+              <span class="decoration">[</span><%= link_to "削除", group_path(group.id), method: :delete %><span class="decoration">]</span>
+            </div>
+          </div>
         </div>
       </div>
     <% end %>
